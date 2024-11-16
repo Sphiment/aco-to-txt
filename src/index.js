@@ -194,19 +194,20 @@ var Local = (function() {
         var color_item = {
             color_name     : n_name,
             css_class_name : 'color-'+InflectionJS.dasherize(n_name.toLowerCase()),
-            color_hex      : color.toHex(),
-            dark_color_hex : color.darken(shadeFactor).toHex(),
-            light_color_hex : color.lighten(shadeFactor * 2).toHex()
+            color_hex      : '#' + color.toHex(),  // Add '#' to the hex value
+            dark_color_hex : '#' + color.darken(shadeFactor).toHex(),
+            light_color_hex : '#' + color.lighten(shadeFactor * 2).toHex()
         };
 
-        // Just push the hex code, instead of the full HTML structure
+        // Just push the hex code, prefixed with '#', instead of the full HTML structure
         html.push(color_item.color_hex);
     }
 
-    // Join all the hex codes with new lines or space if you want
+    // Join all the hex codes with new lines
     return html.join('\n');
 }
 
+      
       function showColorPalette(_colors) {
 
             colors = _colors || colors;
