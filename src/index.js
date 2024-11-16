@@ -59,27 +59,8 @@ var Local = (function() {
                             <p>#<%this.dark_color_hex%></p>\
                            </section>'];
 
-      var cssTemplate  = ['.<%this.css_class_name%> {\
-                            background-color : #<%this.color_hex%>;\
-                          }','.<%this.css_class_name%> {\
-                             background-color : #<%this.color_hex%>;\
-                             }\
-                            .<%this.css_class_name%>-light {\
-                              background-color : #<%this.light_color_hex%>;\
-                             }','.<%this.css_class_name%> {\
-                             background-color : #<%this.color_hex%>;\
-                             }\
-                            .<%this.css_class_name%>-dark {\
-                              background-color : #<%this.dark_color_hex%>;\
-                             }','.<%this.css_class_name%> {\
-                             background-color : #<%this.color_hex%>;\
-                             }\
-                            .<%this.css_class_name%>-dark {\
-                              background-color : #<%this.dark_color_hex%>;\
-                             }\
-                            .<%this.css_class_name%>-light {\
-                              background-color : #<%this.light_color_hex%>;\
-                             }'];
+      var cssTemplate  = ['#<%this.color_hex%>
+                             '];
 
       var bodyTemplate = '<div><%this.html%></div>\
                           <br><div>\
